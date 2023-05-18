@@ -6,9 +6,10 @@ import Login from "../Pages/Login/Login";
 import Registration from "../Pages/Registration/Registration";
 import PrivateRoute from "./PrivateRoute";
 import Error from "../Pages/Error/Error";
-import AllToys from "../Pages/AllToys/AllToys";
-import MyToys from "../Pages/MyToys/MyToys";
-import AddToys from "../Pages/AddToys/AddToys";
+import AllToys from "../Pages/Robotics Toy/AllToys/AllToys";
+import MyToys from "../Pages/Robotics Toy/MyToys/MyToys";
+import AddToys from "../Pages/Robotics Toy/AddToys/AddToys";
+
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             {
                 path: "login",
                 element: <Login></Login>,
+            },
+            {
+                path: "registration",
+                element: <Registration></Registration>,
             },
             {
                 path: "toys",
