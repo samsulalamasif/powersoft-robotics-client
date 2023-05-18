@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ToyTableRow = ({ toy, index, toyDetails }) => {
     const { category, toyName, toyImg, user, price, _id } = toy
@@ -28,7 +29,7 @@ const ToyTableRow = ({ toy, index, toyDetails }) => {
                 <h1>Seller Name: {user}</h1>
             </td>
             <th>
-                <button onClick={() => toyDetails(_id)} className="btn btn-outline btn-md ">Details</button>
+                <Link to={`/details/${_id}`} className="btn btn-outline btn-md ">Details</Link>
             </th>
         </tr>
     );

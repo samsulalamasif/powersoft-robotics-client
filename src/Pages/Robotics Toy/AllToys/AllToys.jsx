@@ -10,9 +10,6 @@ const AllToys = () => {
     }, [])
 
 
-    const toyDetails = (id) => {
-        console.log(id);
-    }
 
 
 
@@ -39,8 +36,7 @@ const AllToys = () => {
                         toys.map((toy, index) => <ToyTableRow
                             key={toy._id}
                             toy={toy}
-                            index={index}
-                            toyDetails={toyDetails}>
+                            index={index}>
                         </ToyTableRow>)
                     }
                 </tbody>

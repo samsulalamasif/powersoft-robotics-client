@@ -49,9 +49,6 @@ const MyToys = () => {
 
 
 
-
-
-
     return (
         <div className="overflow-x-auto w-full">
             <table className="table w-full">
@@ -78,13 +75,10 @@ const MyToys = () => {
                             toyDelete={toyDelete}>
                         </MyToyRow>)
                     }
-
-
                 </tbody>
 
             </table>
         </div>
     );
 };
-
 export default MyToys;
