@@ -1,6 +1,7 @@
 import React from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../../../providers/AuthProviders';
+import Swal from 'sweetalert2';
 
 const AddToys = () => {
     const { user } = useContext(AuthContext)
@@ -32,7 +33,14 @@ const AddToys = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire(
+                        'Toy add successfully!',
+                        'Thank You!',
+                        'success'
+                    )
+                    form.reset()
+                }
             })
     }
 
@@ -64,7 +72,6 @@ const AddToys = () => {
                                     <span className="label-text">Sub-Category</span>
                                 </label>
                                 <select className="select select-bordered max-w-xs" required name='category'>
-                                    <option disabled selected>Category list</option>
                                     <option>Humanoid Robotics</option>
                                     <option>Wheeled Robotics</option>
                                     <option>Legged Robotics</option>

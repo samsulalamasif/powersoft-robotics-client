@@ -9,6 +9,14 @@ const AllToys = () => {
             .then(data => setToys(data))
     }, [])
 
+
+    const toyDetails = (id) => {
+        console.log(id);
+    }
+
+
+
+
     return (
         <div className="overflow-x-auto w-full">
             <table className="table w-full">
@@ -30,7 +38,8 @@ const AllToys = () => {
                         toys.map((toy, index) => <ToyTableRow
                             key={toy._id}
                             toy={toy}
-                            index={index}>
+                            index={index}
+                            toyDetails={toyDetails}>
                         </ToyTableRow>)
                     }
 

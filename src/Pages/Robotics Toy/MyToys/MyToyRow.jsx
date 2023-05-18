@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ToyTableRow = ({ toy, index, toyDetails }) => {
+const MyToyRow = ({ toy, index, toyUpdate, toyDelete }) => {
     const { category, toyName, toyImg, user, email, _id } = toy
 
     return (
@@ -28,10 +28,13 @@ const ToyTableRow = ({ toy, index, toyDetails }) => {
                 </div>
             </td>
             <th>
-                <button onClick={() => toyDetails(_id)} className="btn btn-outline btn-md ">Details</button>
+                <button onClick={() => toyUpdate(_id)} className="btn btn-info btn-sm ">Update</button>
+            </th>
+            <th>
+                <button onClick={() => toyDelete(_id)} className="btn btn-error btn-sm">Delete</button>
             </th>
         </tr>
     );
 };
 
-export default ToyTableRow;
+export default MyToyRow;
