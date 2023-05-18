@@ -17,7 +17,11 @@ const Navbar = () => {
     const router = <>
         <li className='font-semibold'><Link to="/">Home</Link></li>
         <li className='font-semibold'><Link to="/blog">Blog</Link></li>
-        <li className='font-semibold'><Link to="/login">Login</Link></li>
+        <li className='font-semibold'><Link to="/toys">All Toys</Link></li>
+        {user && <>
+            <li className='font-semibold'><Link to="/myToys">My Toys</Link></li>
+            <li className='font-semibold'><Link to="/addToys">Add A Toy</Link></li>
+        </>}
     </>
 
 

@@ -28,7 +28,7 @@ const Footer = () => {
             <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
                 <div className="items-center grid-flow-col">
                     <img className='w-12 h-12 ' src={logo} alt="" />
-                    <p className=' font-semibold'>Powersoft Robotics Ltd. <br />Providing reliable robotics since 2020</p>
+                    <p className=' font-semibold'>Powersoft <span className='text-orange-600'>Robotics </span> <br />Providing reliable robotics gadgets since 2020</p>
                 </div>
                 <div className="md:place-self-center md:justify-self-end">
                     <div className="grid grid-flow-col gap-4">

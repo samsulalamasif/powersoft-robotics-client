@@ -10,7 +10,7 @@ const CustomerReview = () => {
                 <br />
                 robotics field is to create intelligent machines that can assist humans in a variety <br />
                 of ways. Robotics can take on a number of forms.</p>
-            <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 '>
+            <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 '>
                 <div className="card card-compact w-96 bg-base-100 shadow-xl p-5 mx-auto">
                     <div className="card-body">
                         <p>It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content</p>
