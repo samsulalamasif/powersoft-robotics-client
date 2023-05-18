@@ -26,7 +26,7 @@ const AddToys = () => {
             user, email, toyImg, toyName, category, quantity, rating, price, details
         }
         console.log(addToy);
-        fetch("http://localhost:5000/addToy", {
+        fetch("https://powersoft-robotics-server-side.vercel.app/addToy", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
