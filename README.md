@@ -1,5 +1,10 @@
 # Powersoft Robotics
 
+
+# Live Link:
+## Hosted in Firebase -> [Powersoft Robotics](https://powersoft-robotics.web.app/)
+
+
 ## Private Repo Link:
 
 ### Client Side Repo -> [https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-samsulalamasif.git](https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-samsulalamasif.git)
@@ -8,9 +13,6 @@
 
 
 
-## Live Link:
-
-### Hosted in Firebase -> [Powersoft Robotics]()
 
 
 ## [React Router](https://reactrouter.com/en/main/start/tutorial)
