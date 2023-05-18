@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBhrwyf1HIEwKu0CtG00xRW4Hxzf3Vv_gg",
-    authDomain: "powersoft-robotics.firebaseapp.com",
-    projectId: "powersoft-robotics",
-    storageBucket: "powersoft-robotics.appspot.com",
-    messagingSenderId: "912887864275",
-    appId: "1:912887864275:web:2296d12235cb4a5700ad26"
+    apiKey: import.meta.env.Vite_apiKey,
+    authDomain: import.meta.env.Vite_authDomain,
+    projectId: import.meta.env.Vite_projectId,
+    storageBucket: import.meta.env.Vite_storageBucket,
+    messagingSenderId: import.meta.env.Vite_messagingSenderId,
+    appId: import.meta.env.Vite_appId
 };
 
 // Initialize Firebase
