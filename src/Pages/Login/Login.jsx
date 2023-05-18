@@ -1,31 +1,26 @@
-// import React, { useContext, useState } from 'react';
-import { FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-// import { AuthContext } from '../../providers/AuthProviders';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProviders';
+import { useContext, useState } from 'react';
 
 const Login = () => {
-    // // const { signIn, google, github } = useContext(AuthContext)
-    // // const [error, setError] = useState('');
-    // const location = useLocation();
-    // const navigate = useNavigate();
-    // const from = location.state?.from?.pathname || '/'
+    const { signIn, google } = useContext(AuthContext)
+    const [error, setError] = useState('');
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || '/'
 
 
-
-    // const googleHandler = () => {
-    //     google()
-    //         .then(result => {
-    //             const loggedUser = result.user;
-    //             console.log(loggedUser);
-    //             navigate(from, { replace: true })
-
-
-    //         })
-    //         .catch(error => {
-    //             setError(error.message);
-    //         })
-
-    // }
+    const googleHandler = () => {
+        google()
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                navigate(from, { replace: true })
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+    }
 
 
     const handleLogin = event => {
@@ -35,18 +30,17 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
 
-        // setError("")
-        // signIn(email, password)
-        //     .then(result => {
-        //         const loggedUser = result.user;
-        //         console.log(loggedUser);
-        //         navigate(from, { replace: true })
-        //         form.reset()
-
-        //     })
-        //     .catch(error => {
-        //         setError(error.message);
-        //     })
+        setError("")
+        signIn(email, password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                navigate(from, { replace: true })
+                form.reset()
+            })
+            .catch(error => {
+                setError(error.message);
+            })
     }
 
 
@@ -70,7 +64,7 @@ const Login = () => {
                             </label>
                             <input type="text" placeholder="password" name='password' className="input input-bordered" required />
                             <label className="label">
-                                <span className="label-text text-red-600">error</span>
+                                <span className="label-text text-red-600">{error}</span>
                             </label>
                         </div>
                         <div className="form-control mt-6">
@@ -82,7 +76,7 @@ const Login = () => {
 
                     </form>
 
-                    <button className='flex justify-center mb-5'><img className='w-56 h-14 rounded-2xl' src="https://onymos.com/wp-content/uploads/2020/10/google-signin-button.png" alt="" /></button>
+                    <button onClick={googleHandler} className='flex justify-center mb-5'><img className='w-56 h-14 rounded-2xl' src="https://onymos.com/wp-content/uploads/2020/10/google-signin-button.png" alt="" /></button>
 
 
                 </div>

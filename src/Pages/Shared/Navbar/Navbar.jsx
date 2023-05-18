@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from "/logo.svg"
+import { AuthContext } from '../../../providers/AuthProviders';
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext)
+
+
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch(error => console.log(error))
+    }
+
+
     const router = <>
         <li className='font-semibold'><Link to="/">Home</Link></li>
         <li className='font-semibold'><Link to="/blog">Blog</Link></li>
@@ -11,7 +22,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar bg-cyan-200">
+        <div className="navbar bg-cyan-100">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -30,8 +41,15 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                <a className="btn">Get started</a>
+                {user && <div className="tooltip tooltip-left" data-tip={user.displayName}>
+                    <img className='w-14 h-14 p-2 rounded-full' src={user.photoURL} />
+                </div>}
+                {user ?
+                    <button onClick={handleLogOut} className='btn btn-outline'>Logout</button> :
+                    <Link to="/login">
+                        <button className='btn btn-outline'>Login</button>
+                    </Link>
+                }
             </div>
         </div>
     );
