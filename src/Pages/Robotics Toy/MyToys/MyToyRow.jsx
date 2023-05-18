@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MyToyRow = ({ toy, index, toyUpdate, toyDelete }) => {
     const { category, toyName, toyImg, user, email, _id } = toy
@@ -28,10 +29,11 @@ const MyToyRow = ({ toy, index, toyUpdate, toyDelete }) => {
                 </div>
             </td>
             <th>
-                <button onClick={() => toyUpdate(_id)} className="btn btn-info btn-sm ">Update</button>
+                <Link to={`/update/${_id}`} className="btn btn-info btn-sm ">Update</Link>
             </th>
             <th>
-                <button onClick={() => toyDelete(_id)} className="btn btn-error btn-sm">Delete</button>
+                <button className="btn btn-error btn-sm">Delete</button>
+
             </th>
         </tr>
     );

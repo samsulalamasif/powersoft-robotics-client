@@ -29,7 +29,8 @@ const AllToys = () => {
                         <th>Toy Photo</th>
                         <th>Toy Name</th>
                         <th>Category</th>
-                        <th>Seller Details</th>
+                        <th>Toy Price</th>
+                        <th>Seller Name</th>
                         <th>Details</th>
                     </tr>
                 </thead>
@@ -42,8 +43,6 @@ const AllToys = () => {
                             toyDetails={toyDetails}>
                         </ToyTableRow>)
                     }
-
-
                 </tbody>
 
             </table>

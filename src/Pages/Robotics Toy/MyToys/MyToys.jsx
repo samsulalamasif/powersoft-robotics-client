@@ -7,21 +7,17 @@ const MyToys = () => {
     const [toys, setToys] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myToy/${user.email}`)
+        fetch(`http://localhost:5000/myToy/${user?.email}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }
-        , [])
+        , [user])
 
 
 
-    const toyUpdate = (id) => {
-        console.log(id);
-    }
 
-    const toyDelete = (id) => {
-        console.log(id);
-    }
+
+
 
 
 
@@ -47,9 +43,7 @@ const MyToys = () => {
                         toys.map((toy, index) => <MyToyRow
                             key={toy._id}
                             toy={toy}
-                            index={index}
-                            toyUpdate={toyUpdate}
-                            toyDelete={toyDelete}>
+                            index={index}>
                         </MyToyRow>)
                     }
 
