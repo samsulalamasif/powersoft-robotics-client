@@ -19,18 +19,6 @@ const MyToyUpdate = () => {
             price, quantity, details
         }
         console.log(updateToy);
-        /* fetch(`http://localhost:5000/update/${_id}`, {
-            method: "PUT",
-            headers: {
-                "content-type": "application/json"
-            },
-            body: JSON.stringify(updateToy)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-            }) */
-
         fetch(`http://localhost:5000/update/${loader._id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },

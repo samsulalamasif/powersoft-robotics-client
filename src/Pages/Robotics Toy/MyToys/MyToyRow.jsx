@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MyToyRow = ({ toy, index, toyUpdate, toyDelete }) => {
+const MyToyRow = ({ toy, index, toyDelete }) => {
     const { category, toyName, toyImg, user, email, _id } = toy
 
     return (
@@ -32,7 +32,7 @@ const MyToyRow = ({ toy, index, toyUpdate, toyDelete }) => {
                 <Link to={`/update/${_id}`} className="btn btn-info btn-sm ">Update</Link>
             </th>
             <th>
-                <button className="btn btn-error btn-sm">Delete</button>
+                <button onClick={() => toyDelete(_id)} className="btn btn-error btn-sm">Delete</button>
 
             </th>
         </tr>
