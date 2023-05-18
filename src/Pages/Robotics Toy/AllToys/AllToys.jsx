@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import ToyTableRow from './ToyTableRow';
+import useTitle from '../../../TitleHooks/useTitle';
 
 const AllToys = () => {
+    useTitle("All Toys")
     const [toys, setToys] = useState([])
     useEffect(() => {
         fetch("http://localhost:5000/allToys")
@@ -14,9 +16,12 @@ const AllToys = () => {
 
 
 
+
+
     return (
         <div className="overflow-x-auto w-full">
-            <table className="table w-full">
+            <button className='btn btn-outline my-5'>Search</button>
+            <table className="table w-full my-5">
                 {/* head */}
                 <thead>
                     <tr>

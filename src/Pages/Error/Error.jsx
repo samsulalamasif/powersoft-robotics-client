@@ -3,6 +3,7 @@ import errorImg from "../../assets/error.jpg"
 import { Link, useRouteError } from 'react-router-dom';
 
 const Error = () => {
+
     const { error, status } = useRouteError();
     return (
         <div className='h-max'>

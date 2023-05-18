@@ -3,8 +3,10 @@ import Header from '../Header/Header';
 import Gallery from '../Gallery/Gallery';
 import TeamPartner from '../Team/TeamPartner';
 import CustomerReview from './CustomerReview/CustomerReview';
+import useTitle from '../../../TitleHooks/useTitle';
 
 const Home = () => {
+    useTitle("Home")
     return (
         <div>
             <Header></Header>
