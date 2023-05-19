@@ -47,7 +47,7 @@ const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <ToyDetails></ToyDetails>
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`https://powersoft-robotics-server-side.vercel.app/details/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
             },
             {
                 path: "myToys",
@@ -66,7 +66,7 @@ const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <MyToyUpdate></MyToyUpdate>
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`https://powersoft-robotics-server-side.vercel.app/details/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
             },
         ]
     },

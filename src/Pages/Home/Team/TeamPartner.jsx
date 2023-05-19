@@ -2,7 +2,8 @@ import React from 'react';
 
 const TeamPartner = () => {
     return (
-        <div className='bg-cyan-200 pb-10'>
+        <div className='bg-cyan-200 pb-10 my-56' data-aos="zoom-in-down"
+            data-aos-duration="2000">
             <h1 className='text-5xl text-center py-20 font-bold'>You would love It here!</h1>
             <div className='flex flex-col lg:flex-row justify-center gap-32'>
                 <div>

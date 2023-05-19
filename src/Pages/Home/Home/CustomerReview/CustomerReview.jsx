@@ -2,7 +2,8 @@ import React from 'react';
 
 const CustomerReview = () => {
     return (
-        <div className='text-center my-24'>
+        <div className='text-center my-24' data-aos="zoom-in-down"
+            data-aos-duration="2000">
             <h1 className='mb-5 text-4xl font-bold font-serif'>Our Customer Review
             </h1>
             <p className="mb-5">Robotics is a branch of engineering that involves <br />

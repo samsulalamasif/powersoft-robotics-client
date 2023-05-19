@@ -8,7 +8,7 @@ const MyToyUpdate = () => {
 
     const loader = useLoaderData()
     const { _id, price, quantity, details } = loader
-
+    // console.log(_id);
 
     const toyUpdate = (event) => {
         event.preventDefault()
@@ -20,8 +20,9 @@ const MyToyUpdate = () => {
         const updateToy = {
             price, quantity, details
         }
-        console.log(updateToy);
-        fetch(`https://powersoft-robotics-server-side.vercel.app/update/${loader._id}`, {
+        // console.log(updateToy);
+
+        fetch(`http://localhost:5000/update/${loader?._id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(updateToy),
@@ -40,6 +41,7 @@ const MyToyUpdate = () => {
             });
 
     }
+
 
 
 
