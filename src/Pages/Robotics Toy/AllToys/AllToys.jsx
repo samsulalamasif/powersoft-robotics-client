@@ -7,7 +7,7 @@ const AllToys = () => {
     const [toys, setToys] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:5000/allToys")
+        fetch("https://powersoft-robotics-server-side.vercel.app/allToys")
             .then(res => res.json())
             .then(data => setToys(data))
     }, [])
@@ -17,7 +17,7 @@ const AllToys = () => {
 
     const [searchText, setSearchText] = useState("")
     const handleSearch = () => {
-        fetch(`http://localhost:5000/toySearch/${searchText}`)
+        fetch(`https://powersoft-robotics-server-side.vercel.app/toySearch/${searchText}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }

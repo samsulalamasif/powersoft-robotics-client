@@ -11,7 +11,7 @@ const MyToys = () => {
     const [toys, setToys] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myToy/${user?.email}`)
+        fetch(`https://powersoft-robotics-server-side.vercel.app/myToy/${user?.email}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }
@@ -30,7 +30,7 @@ const MyToys = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/delete/${id}`, {
+                fetch(`https://powersoft-robotics-server-side.vercel.app/delete/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

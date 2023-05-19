@@ -22,7 +22,7 @@ const MyToyUpdate = () => {
         }
         // console.log(updateToy);
 
-        fetch(`http://localhost:5000/update/${loader?._id}`, {
+        fetch(`https://powersoft-robotics-server-side.vercel.app/update/${loader?._id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(updateToy),

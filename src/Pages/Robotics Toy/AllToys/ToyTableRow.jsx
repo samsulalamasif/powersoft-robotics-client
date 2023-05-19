@@ -23,7 +23,7 @@ const ToyTableRow = ({ toy, index, toyDetails }) => {
                 <h1>{category}</h1>
             </td>
             <td>
-                <h1>Price: {price}</h1>
+                <h1>Price: $ {price}</h1>
             </td>
             <td>
                 <h1>Seller Name: {user}</h1>
