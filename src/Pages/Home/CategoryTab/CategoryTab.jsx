@@ -45,7 +45,6 @@ const CategoryTab = () => {
                                 key={toy._id}
                                 toy={toy}>
                             </CategoryCard>)
-
                         }
                     </div>
                 </TabPanel>
